@@ -1,25 +1,20 @@
 #include <iostream>
 using namespace std;
 
-int main(){
-    //variabili
-    float a,b,c;
+int main() {
 
-    //input
-    cin >>a>>b>>c;
-
-    //area triangolo
-    cout <<0.5*a*b<<endl;
-
-    //area quadrato
-    cout <<a*a<<endl;
-
-    //area rettangolo
-    cout << a*b<<endl;
-
-    //area trapezio
-    cout << 0.5*(a+b)*c<<endl;
-
-    return 0;
-
+    int n;
+    cin >> n;
+    if (n<2){
+        cout << "errore " ;
+        return 0;
+    };
+    int a = 1 , b = 0 , c = 0 ;
+    for (int i = 1 ; i <= n; i++)
+    {
+        c = a + b;
+        a = b;
+        b = c;
+        cout << c << endl;
+    }
 }
